@@ -22,6 +22,9 @@ Route::get('/register', function () {
     return view('auth.register');
 });
 
+Route::get('/informasitagihan', function () {
+    return view('informasitagihan');
+});
 
 Route::get('/dashboard', function () {
     return view('dashboard');
