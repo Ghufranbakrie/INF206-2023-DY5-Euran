@@ -6,17 +6,17 @@
 
     
     <div class="relative overflow-x-auto shadow-md sm:rounded-lg m-10">
-        <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-            <thead class="text-xs text-gray-700 uppercase bg-[#C8CBC0]">
+        <table class="w-full text-base text-left text-gray-500 dark:text-gray-400">
+            <thead class="text-base text-white uppercase bg-emerald-900">
                 <tr>
                     <th scope="col" class="px-6 py-3 text-center">
-                        <strong>Bulan Tagihan</strong>
+                        Bulan Tagihan
                     </th>
                     <th scope="col" class="px-6 py-3 text-center">
-                        <strong>Rupiah</strong>
+                        Rupiah
                     </th>
                     <th scope="col" class="px-6 py-3 text-center">
-                        <strong>Keterangan</strong>
+                        Keterangan
                     </th>
 
                 </tr>
