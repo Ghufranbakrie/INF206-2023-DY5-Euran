@@ -22,7 +22,7 @@ class HomeController extends Controller
         }
 
         else{
-            return view('layouts/dashboard');
+            return view('dashboard');
         }
     }
 }
