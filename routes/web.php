@@ -34,6 +34,10 @@ Route::get('/dashboard', function () {
 
 Route::get('/historyPembayaran', [App\Http\Controllers\PembayaranController::class, 'readDB']);
 
+Route::get('/buktiPengambilan', function() {
+    return view('buktiPengambilan');
+});
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
