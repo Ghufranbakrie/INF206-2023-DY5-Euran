@@ -6,15 +6,15 @@
     <div class="relative  h-56 overflow-hidden rounded-lg md:h-96">
          <!-- Item 1 -->
         <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="carousel1.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            <img src="carousel1.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
         </div>
         <!-- Item 2 -->
         <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="carousel2.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            <img src="carousel2.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
         </div>
         <!-- Item 3 -->
         <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="carousel3.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            <img src="carousel3.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
         </div>
         
     </div>
@@ -43,7 +43,7 @@
 
      <!--card start-->
   <div class="pt-20 pl-64">
-    <a href="/informasitagihan" class="relative w-3/4 h-56 block w-sm border bg-emerald-900 border-gray-200 rounded-lg shadow-2xl hover:bg-gray-100 dark:border-gray-700 dark:hover:bg-emerald-950 text-white hover:text-black">
+    <a href="/informasitagihan" class="relative w-3/4 h-56 block w-sm border bg-emerald-900 border-gray-200 rounded-lg shadow-2xl hover:bg-emerald-700 text-white">
       <h5 class="mt-6 ml-6 text-2xl font-bold tracking-tight">Informasi Tagihan : </h5>
       <p class=" mt-6 ml-6 font-normal text-gray-400">Anda belum membayar iuran tagihan sampah, lakukan pembayaran di menu Bayar</p>
       <button type="button" class="mt-14 ml-6 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
