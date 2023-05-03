@@ -43,7 +43,7 @@
 
      <!--card start-->
   <div class="pt-20 pl-64">
-    <a href="/informasitagihan" class="relative w-3/4 h-56 block w-sm border bg-emerald-900 border-gray-200 rounded-lg shadow-2xl hover:bg-gray-100 dark:border-gray-700 dark:hover:bg-emerald-950 text-white hover:text-black">
+    <a href="/informasitagihan" class="relative w-3/4 h-56 block w-sm border bg-emerald-900 border-gray-200 rounded-lg shadow-2xl hover:bg-emerald-700 text-white">
       <h5 class="mt-6 ml-6 text-2xl font-bold tracking-tight">Informasi Tagihan : </h5>
       <p class=" mt-6 ml-6 font-normal text-gray-400">Anda belum membayar iuran tagihan sampah, lakukan pembayaran di menu Bayar</p>
       <button type="button" class="mt-14 ml-6 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
