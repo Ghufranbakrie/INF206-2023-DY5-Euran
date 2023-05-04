@@ -6,15 +6,15 @@
     <div class="relative  h-56 overflow-hidden rounded-lg md:h-96">
          <!-- Item 1 -->
         <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="carousel1.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            <img src="carousel1.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
         </div>
         <!-- Item 2 -->
         <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="carousel2.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            <img src="carousel2.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
         </div>
         <!-- Item 3 -->
         <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="carousel3.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            <img src="carousel3.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
         </div>
         
     </div>
@@ -43,12 +43,12 @@
 
      <!--card start-->
   <div class="pt-20 pl-64">
-    <a href="/informasitagihan" class="relative w-3/4 h-56 block w-sm border bg-emerald-900 border-gray-200 rounded-lg shadow-2xl hover:bg-gray-100 dark:border-gray-700 dark:hover:bg-emerald-950 text-white hover:text-black">
+    <a href="/informasitagihan" class="relative w-3/4 h-56 block w-sm border bg-emerald-900 border-gray-200 rounded-lg shadow-2xl hover:bg-emerald-700 text-white">
       <h5 class="mt-6 ml-6 text-2xl font-bold tracking-tight">Informasi Tagihan : </h5>
-      <p class=" mt-6 ml-6 font-normal text-gray-400">Anda belum membayar iuran tagihan sampah, lakukan pembayaran di menu Bayar</p>
-      <button type="button" class="mt-14 ml-6 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+      <p class=" mt-6 ml-6 font-normal text-gray-400 flex-auto">Jika {{ Auth::user()->name }} belum membayar iuran tagihan sampah, segera membayar di menu informasi tagihan atau tomboh dibawah ini.</p>
+      <button type="button" class="mt-10 ml-6 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
         <svg aria-hidden="true" class="w-5 h-5 mr-2 -ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path></svg>
-        Pay Now
+        Bayar Sekarang
       </button>
     </a>
   </div>
