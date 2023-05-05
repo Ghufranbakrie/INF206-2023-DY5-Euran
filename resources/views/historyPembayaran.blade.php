@@ -13,7 +13,7 @@
                         Bulan Tagihan
                     </th>
                     <th scope="col" class="px-6 py-3 text-center">
-                        Rupiah
+                        Jumlah Tagihan
                     </th>
                     <th scope="col" class="px-6 py-3 text-center">
                         Keterangan
