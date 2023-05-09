@@ -18,7 +18,7 @@ class HomeController extends Controller
 
         if ($role== '1'){
 
-            return view('petugas');
+            return view('listrumah');
         }
 
         else{
