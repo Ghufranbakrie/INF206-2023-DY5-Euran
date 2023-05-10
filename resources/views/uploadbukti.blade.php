@@ -50,7 +50,7 @@
   <!--Navbar End-->
 
  <!-- Form upload bukti -->
-<div class="overflow-hidden bg-white sm:rounded-xl relative mx-auto mt-28 shadow-lg max-w-md">
+ <div class="overflow-hidden bg-white sm:rounded-xl relative mx-auto mt-28 shadow-lg max-w-md">
   <div class="bg-white px-4 py-5 sm:px-6">
     <form>
     <div>
