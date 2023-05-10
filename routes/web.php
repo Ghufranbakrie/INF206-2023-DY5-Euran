@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,6 +18,8 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
+Route::get('/redirects',[HomeController::class,"index"]);
+
 Route::get('/register', function () {
     return view('auth.register');
 });
@@ -30,10 +32,25 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::get('/historyPembayaran', [App\Http\Controllers\PembayaranController::class, 'readDB']);
+
+Route::get('/buktiPengambilan', function() {
+    return view('buktiPengambilan');
+});
+
+Route::get('/uploadbukti', function() {
+    return view('uploadbukti');
+});
+
+Route::get('/listrumah', function() {
+    return view('listrumah');
+});
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
 
 require __DIR__.'/auth.php';

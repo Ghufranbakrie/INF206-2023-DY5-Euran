@@ -1,7 +1,10 @@
-<nav x-data="{ open: false }" class="bg-white dark:bg-gray-50 border-b border-gray-100 dark:border-gray-50">
+<nav x-data="{ open: false }" class="bg-gray-100 dark:bg-gray-50 border-b border-gray-100 dark:border-gray-50">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
+            @auth
+            @if(auth()->user()->role == '0')
+
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
@@ -9,21 +12,41 @@
                         <x-application-logo-dashboard class="block h-auto w-auto m-auto fill-current text-gray-800 dark:text-gray-200" />
                     </a>
                 </div>
- 
+            
+                
+                
+            <!-- Navbar -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <ul class="md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-[#fafafa] w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
+                    <ul class="md:flex md:items-center z-[-1] md:z-auto md:static absolute  w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
                         <li class="mx-4 my-8 ">
-                          <a href="/informasitagihan" class="text-lg hover:text-[#426A4E] duration-500">Informasi Tagihan</a>
+                          <a href="/informasitagihan" class="text-lg hover:text-[#426A4E] font-semibold">Informasi Tagihan</a>
                         </li>
                         <li class="mx-4 my-8 ">
-                          <a href="#" class="text-lg hover:text-[#426A4E] duration-500">Riwayat Pembayaran</a>
+                          <a href="/historyPembayaran" class="text-lg hover:text-[#426A4E] font-semibold">Riwayat Pembayaran</a>
                         </li>
                         <li class="mx-4 my-8 ">
-                          <a href="#" class="text-lg hover:text-[#426A4E] duration-500">Bukti Pengambilan Sampah</a>
+                          <a href="/buktiPengambilan" class="text-lg hover:text-[#426A4E] font-semibold">Bukti Pengambilan Sampah</a>
                         </li>
                 </div>
             </div>
-
+            @else
+            <div class="shrink-0 flex items-center">
+                <a href="">
+                    <x-application-logo-dashboard class="block h-auto w-auto m-auto fill-current text-gray-800 dark:text-gray-200" />
+                </a>
+            </div>
+            <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex bg-white">
+                <ul class="md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
+                    <li class="mx- mr-40">
+                      <a href="/listrumah" class="text-lg hover:text-[#426A4E] font-semibold">List Rumah</a>
+                    </li>
+                    <li class="mr-40">
+                      <a href="/uploadbukti" class="text-lg hover:text-[#426A4E] font-semibold">Upload Bukti</a>
+                    </li>
+                    
+            </div>
+            @endif
+            @endauth
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ml-6">
                 <x-dropdown align="right" width="48">

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -49,6 +50,9 @@
   </nav>
   <!--Navbar End-->
 
+=======
+<x-app-layout>
+>>>>>>> db119ea9d477484b33abfc18008b6b8010d8b679
  <!-- Form upload bukti -->
  <div class="overflow-hidden bg-white sm:rounded-xl relative mx-auto mt-28 shadow-lg max-w-md">
   <div class="bg-white px-4 py-5 sm:px-6">
@@ -91,5 +95,4 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
       <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
       <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-</body>
-</html>
+    </x-app-layout>
