@@ -62,23 +62,22 @@
       <label for="alamat" class="block text-sm font-medium text-gray-700">Alamat</label>
       <input type="text" name="alamat" id="alamat" required
              class="mt-1 focus:ring-green-500 focus:border-green-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
-    </div>    
-    <div class="mt-4">
-      <label for="bukti" class="block text-sm font-medium text-gray-700">Upload Bukti Pembayaran</label>
-      <div class="mt-1 flex items-center">
-        <label for="bukti" class="px-3 py-2 bg-gray-100 text-sm font-medium text-gray-700 rounded-md cursor-pointer hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
-          <span>Upload</span>
-          <input id="bukti" name="bukti" type="file" class="sr-only">
-        </label>
-        <span class="ml-3" id="bukti-file-name"></span>
-      </div>
+    </div>     
+    <div class="flex items-center justify-center w-full mt-7">
+      <label for="dropzone-file" class="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-100 border-solid border-solid rounded-lg cursor-pointer bg-gray-300 hover:bg-gray-200 text-gray-200 hover:text-gray-600 transition-colors duration-300">
+        <div class="flex flex-col items-center justify-center pt-5 pb-6">
+          <svg aria-hidden="true" class="w-10 h-10 mb-3 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path></svg>
+          <p class="mb-2 text-sm text-black-500 dark:text-gray-500"><span class="font-semibold">Pilih Berkas</span></p>
+        </div>
+        <input id="dropzone-file" type="file" class="hidden" />
+      </label>
     </div>
+    
     <div class="mt-4">
-      <button type="submit" class="py-2 px-4 bg-green-500 hover:bg-green-600 text-white rounded-lg">Submit</button>
+      <button type="submit" class="py-2 px-4 bg-green-500 hover:bg-green-600 text-white rounded-lg">Upload</button>
     </div>
   </form>
 </div>
-
 
   
     <script>
