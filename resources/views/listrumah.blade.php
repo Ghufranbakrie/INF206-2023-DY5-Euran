@@ -1,31 +1,19 @@
 <x-app-layout>
-    
+
   <div class="overflow-hidden bg-white sm:rounded-xl relative w-3/6 mx-auto mt-28 shadow-lg">
     <div class="px-4 py-5 sm:px-6">
-      <h2 class="text-base font-semibold leading-6 text-gray-900">List Rumah</h2>
+      <h2 class="text-base font-semibold leading-6 text-gray-900 ">List Rumah</h2>
     </div>
     <div class="border-t border-gray-200">
       <dl>
+        @foreach($user as $list)
         <div class="bg-gray-100 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-          <dt class="text-sm font-medium text-gray-500">Sudirman <br>Jl. Pahlawan No.123</br></dt>
+          <dt class="text-sm font-medium text-bold"> <strong>{{ $list->name }}</strong> <br>{{ $list->address }}</br></dt>
           <div class="sm:col-span-2 sm:flex sm:justify-end">
-            <a href="UploadBukti.html"><button type="button" class="py-2 px-4 bg-green-500 hover:bg-green-600 text-white rounded-lg">Ambil</button></a>
+            <a href={{'uploadbukti/'.$list->id}}><button type="button" class="py-2 px-4 bg-green-500 hover:bg-green-600 text-white rounded-lg">Ambil</button></a>
           </div>
         </div>
-        <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-          <dt class="text-sm font-medium text-gray-500">Sulastri <br>Jl. Kebun Sawit No.45</br></dt>
-          <div class="sm:col-span-2 sm:flex sm:justify-end">
-            <a href="UploadBukti.html"><button type="button" class="py-2 px-4 bg-green-500 hover:bg-green-600 text-white rounded-lg">Ambil</button></a>
-          </div>
-        </div>        
-        <div class="bg-gray-100 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-          <dt class="text-sm font-medium text-gray-500">Sukijan <br>Jl. Sukiman No. 67</br></dt>
-          <div class="sm:col-span-2 sm:flex sm:justify-end">
-            <a href="#"><button type="button" class="py-2 px-4 bg-orange-500 hover:bg-orange-600 text-white rounded-lg" onclick="if(!confirm('Belum melakukan pembayaran, tidak dapat mengambil barang.')) return false;">Belum Bayar</button></a>
-          </div>
-        </div>
-      </dl>
-    </div>
+        @endforeach
   </div>
 
   
