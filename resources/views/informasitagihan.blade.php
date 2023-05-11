@@ -79,12 +79,15 @@
             </p>
               </div>
               <!-- Modal footer -->
-              <button data-modal-target="popup-modal" data-modal-toggle="popup-modal" class="mx-6 my-6 w-24 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
+              <form method="POST" action="{{ route('pembayaran.storePayment') }}">
+                @csrf
+              <button data-modal-target="popup-modal" data-modal-toggle="popup-modal" class="mx-8 my-6 w-24 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="submit">
                 Done
               </button>
-              <button data-modal-hide="defaultModal" type="button" class="w-24 text-gray-900 bg-red-900 hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 text-white dark:border-gray-500 dark:hover:text-white dark:hover:bg-red-950 dark:focus:ring-gray-600">Close</button>
-
-<div id="popup-modal" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] md:h-full">
+              <button data-modal-hide="defaultModal" type="button" class="ml-96 w-24 bg-red-900 hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 text-white dark:border-gray-500 dark:hover:text-white dark:hover:bg-red-950 dark:focus:ring-gray-600">Close</button>
+            </form>
+            
+  <div id="popup-modal" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] md:h-full">
     <div class="relative w-full h-full max-w-md md:h-auto">
         <div class="relative bg-emerald-900 rounded-lg shadow ">
             <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white" data-modal-hide="popup-modal">

@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string("email");
             $table->string("Rupiah");
             $table->string("Keterangan");
+            $table->string("Status");
             $table->timestamps();
         });
     }

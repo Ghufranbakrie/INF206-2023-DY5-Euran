@@ -3,6 +3,8 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PembayaranController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -32,11 +34,13 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/historyPembayaran', [App\Http\Controllers\PembayaranController::class, 'readDB']);
+Route::get('/historyPembayaran', [App\Http\Controllers\PembayaranController::class, 'indexHistory']);
 
 Route::get('/buktiPengambilan', function() {
     return view('buktiPengambilan');
 });
+
+Route::post('/pembayaran/store', [PembayaranController::class, 'storePayment'])->name('pembayaran.storePayment');
 
 Route::get('/uploadbukti', function() {
     return view('uploadbukti');

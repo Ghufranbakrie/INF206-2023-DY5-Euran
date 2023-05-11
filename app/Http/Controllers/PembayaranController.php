@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StorepembayaranRequest;
-use App\Http\Requests\UpdatepembayaranRequest;
 use App\Models\pembayaran;
+use Illuminate\Support\Facades\Auth;
+
 
 class PembayaranController extends Controller
 {
@@ -13,15 +14,37 @@ class PembayaranController extends Controller
      */
     public function index()
     {
-        //
+    $users = Auth::user();
+    return view('informasitagihan', compact('users'));
     }
     
-    public function readDB()
+    public function indexHistory()
     {
-            //$buku = DB::table('books')->get();
-            $pembayaran = pembayaran::all();
-            return view("historyPembayaran", ['pembayaran'=>$pembayaran]);
-        
+     // Ambil data pembayaran berdasarkan email user yang sama
+        $pembayaran = Pembayaran::where('email', Auth::user()->email)->get();
+        return view('historyPembayaran', compact('pembayaran'));
+    }
+
+    public function storePayment()
+    {
+       // Cek apakah user sudah terautentikasi atau belum
+       if (Auth::check()) {
+        $user = Auth::user();
+        $pembayaran = new Pembayaran();
+        $pembayaran->bulan = date('Y-m');
+        $pembayaran->email = $user->email;
+        $pembayaran->Rupiah = 50000;
+        $pembayaran->status = 'bayar';
+        $pembayaran->Keterangan = 'Pembayaran bulanan';
+        $pembayaran->save();
+        $user->status = 'bayar';
+        $user->save();
+
+
+        return redirect()->back()->with('success', 'Pembayaran berhasil ditambahkan.');
+    } else {
+        return redirect()->back()->with('error', 'Anda belum login.');
+    }
     }
 
     /**
@@ -56,13 +79,7 @@ class PembayaranController extends Controller
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(UpdatepembayaranRequest $request, pembayaran $pembayaran)
-    {
-        //
-    }
+
 
     /**
      * Remove the specified resource from storage.
