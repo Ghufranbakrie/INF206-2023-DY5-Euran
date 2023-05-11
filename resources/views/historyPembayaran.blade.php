@@ -10,6 +10,9 @@
             <thead class="text-base text-white uppercase bg-emerald-900">
                 <tr>
                     <th scope="col" class="px-6 py-3 text-center">
+                        Id Pembayaran
+                    </th>
+                    <th scope="col" class="px-6 py-3 text-center">
                         Bulan Tagihan
                     </th>
                     <th scope="col" class="px-6 py-3 text-center">
@@ -18,22 +21,24 @@
                     <th scope="col" class="px-6 py-3 text-center">
                         Keterangan
                     </th>
-
                 </tr>
             </thead>
             <tbody>
-            @foreach($pembayaran as $pembayaran)
+            @foreach($pembayaran as $bayar)
                 <tr class="bg-white border-b text-center text-black" >
                     <td scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap" >
-                        {{$pembayaran['bulan']}}
+                    {{$bayar->id}}
+                    </td>
+                    <td scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap" >
+                    {{$bayar->bulan}}
                     </td>
                     <td scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                    {{$pembayaran['Rupiah']}}
+                    {{$bayar->Rupiah}}
                     </td>
                     <td scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                    {{$pembayaran['Keterangan']}}
+                    {{$bayar->Keterangan}}
                     </td>
-                    @endforeach
+            @endforeach
             </tbody>
         </table>
     </div>
