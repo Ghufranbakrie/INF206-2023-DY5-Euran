@@ -41,6 +41,8 @@ Route::get('/buktiPengambilan', function() {
     return view('buktiPengambilan');
 });
 
+Route::get('/informasitagihan', [PembayaranController::class, 'index'])->name('pembayaran.index');
+
 Route::post('/pembayaran/store', [PembayaranController::class, 'storePayment'])->name('pembayaran.storePayment');
 
 Route::get('/uploadbukti', function() {

@@ -17,6 +17,7 @@ class PembayaranController extends Controller
      */
     public function index()
     {
+        $user = Auth()->user();
         return view('informasitagihan', compact('user'));
     }
     
@@ -52,17 +53,6 @@ class PembayaranController extends Controller
         }
     }
 
-
-    
-
-
-
-
-    public function daftarTransaksi()
-    {
-        $transaksi = Transaksi::all();
-        return view('transaksi.index', compact('transaksi'));
-    }
     /**
      * Show the form for creating a new resource.
      */
