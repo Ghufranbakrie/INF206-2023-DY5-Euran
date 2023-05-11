@@ -50,7 +50,7 @@ class HomeController extends Controller
         //     'image' => ['required', 'image','mimes:jpeg,png,jpg,gif,svg', 'max:255'],
         // ]);
        
-        $Gambar = new \App\Models\Gambar;
+        $Gambar = new Gambar;
         $Gambar->email=$request->email;
         $Gambar->image=$request->image;
         $Gambar->image=$request->file('image')->store();
