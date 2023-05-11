@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PembayaranController;
+use App\Http\Controllers\GambarController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,6 +41,8 @@ Route::get('/buktiPengambilan', function() {
     return view('buktiPengambilan');
 });
 
+Route::get('/informasitagihan', [PembayaranController::class, 'index'])->name('pembayaran.index');
+
 Route::post('/pembayaran/store', [PembayaranController::class, 'storePayment'])->name('pembayaran.storePayment');
 
 Route::get('/uploadbukti', function() {
@@ -48,7 +51,13 @@ Route::get('/uploadbukti', function() {
 
 Route::get('/listrumah', function() {
     return view('listrumah');
-});
+})->name('list.rumah');
+
+Route::get('/uploadbukti/{id}', [HomeController::class, 'ambilList']);
+
+Route::post('/uploadbukti/upload', [HomeController::class, 'storeUpload'])->name('upload.bukti');
+
+Route::get('/buktiPengambilan', [GambarController::class, 'gambar']);
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
