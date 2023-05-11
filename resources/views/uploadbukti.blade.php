@@ -9,12 +9,12 @@
      <div>
        <label for="nama" class="block text-sm font-medium text-gray-700">Nama Lengkap</label>
        <label type="text" name="alamat" id="alamat" required
-       class="mt-1 focus:ring-green-500 focus:border-green-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">{{$list->name}}</label>
+       class="mt-2 focus:ring-green-500 focus:border-green-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">{{$list->name}}</label>
      </div>
      <div>
-       <label for="alamat" class="block text-sm font-medium text-gray-700">Alamat</label>
+       <label for="alamat" class="block text-sm font-medium text-gray-700 mt-3">Alamat</label>
        <label type="text" name="alamat" id="alamat" required
-       class="mt-1 focus:ring-green-500 focus:border-green-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">{{$list->address}}</label>
+       class="mt-2 focus:ring-green-500 focus:border-green-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">{{$list->address}}</label>
      </div>    
      @endforeach
      <div class="mt-4">
