@@ -21,13 +21,13 @@
        <label for="bukti" class="block text-sm font-medium text-gray-700">Upload Bukti Pembayaran</label>
        <div class="mt-1 flex items-center">
          <label for="bukti" class="px-3 py-2 w-80 bg-gray-100 text-sm font-medium text-gray-700 rounded-md cursor-pointer hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
-           <input id="bukti" name="image" type="file" class="form-control rounded-md" required>
+           <input id="bukti" name="image" type="file" class="form-control rounded-md " required>
          </label>
          <span class="ml-3" id="bukti-file-name"></span>
        </div>
      </div>
      <div class="mt-4 rounded-md">
-       <button type="submit" class="py-2 px-4 bg-green-500 hover:bg-green-600 text-white rounded-lg">Submit</button>
+       <button type="submit" class="py-2 px-4 ml-40 mt-3 bg-green-500 hover:bg-green-600 text-white rounded-lg">Submit</button>
      </div>
    </form>
  </div>
