@@ -2,13 +2,13 @@
 
   <div class="overflow-hidden bg-white sm:rounded-xl relative w-3/6 mx-auto mt-28 shadow-lg">
     <div class="px-4 py-5 sm:px-6">
-      <h2 class="text-base font-semibold leading-6 text-gray-900">List Rumah</h2>
+      <h2 class="text-base font-semibold leading-6 text-gray-900 ">List Rumah</h2>
     </div>
     <div class="border-t border-gray-200">
       <dl>
         @foreach($user as $list)
         <div class="bg-gray-100 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-          <dt class="text-sm font-medium text-gray-500">{{ $list->name }}<br>{{ $list->address }}</br>{{ $list->phone }}</dt>
+          <dt class="text-sm font-medium text-bold"> <strong>{{ $list->name }}</strong> <br>{{ $list->address }}</br></dt>
           <div class="sm:col-span-2 sm:flex sm:justify-end">
             <a href={{'uploadbukti/'.$list->id}}><button type="button" class="py-2 px-4 bg-green-500 hover:bg-green-600 text-white rounded-lg">Ambil</button></a>
           </div>
