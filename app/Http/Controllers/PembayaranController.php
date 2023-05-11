@@ -3,8 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StorepembayaranRequest;
+use App\Http\Requests\UpdatepembayaranRequest;
 use App\Models\pembayaran;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 
 class PembayaranController extends Controller
@@ -14,9 +17,10 @@ class PembayaranController extends Controller
      */
     public function index()
     {
-    $users = Auth::user();
-    return view('informasitagihan', compact('users'));
+        return view('informasitagihan', compact('user'));
     }
+    
+
     
     public function indexHistory()
     {
@@ -24,6 +28,7 @@ class PembayaranController extends Controller
         $pembayaran = Pembayaran::where('email', Auth::user()->email)->get();
         return view('historyPembayaran', compact('pembayaran'));
     }
+    
 
     public function storePayment()
     {
@@ -33,7 +38,7 @@ class PembayaranController extends Controller
         $pembayaran = new Pembayaran();
         $pembayaran->bulan = date('Y-m');
         $pembayaran->email = $user->email;
-        $pembayaran->Rupiah = 50000;
+        $pembayaran->Rupiah = 20000;
         $pembayaran->status = 'bayar';
         $pembayaran->Keterangan = 'Pembayaran bulanan';
         $pembayaran->save();
@@ -42,11 +47,22 @@ class PembayaranController extends Controller
 
 
         return redirect()->back()->with('success', 'Pembayaran berhasil ditambahkan.');
-    } else {
+        } else {
         return redirect()->back()->with('error', 'Anda belum login.');
-    }
+        }
     }
 
+
+    
+
+
+
+
+    public function daftarTransaksi()
+    {
+        $transaksi = Transaksi::all();
+        return view('transaksi.index', compact('transaksi'));
+    }
     /**
      * Show the form for creating a new resource.
      */
@@ -66,10 +82,7 @@ class PembayaranController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(pembayaran $pembayaran)
-    {
-        //
-    }
+    
 
     /**
      * Show the form for editing the specified resource.
@@ -88,4 +101,12 @@ class PembayaranController extends Controller
     {
         //
     }
+
+    public function listrumah()
+    {
+        return view('listrumah', [
+            'DataList'=> \App\Models\User::all(),
+        ]);
+    }
+
 }
