@@ -1,5 +1,3 @@
-<?php
-
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
@@ -19,7 +17,7 @@ class UserFactory extends Factory
     {
         return [
             'name' => fake()->name(),
-            'phone' => fake()->phone(),
+            'phone' => fake()->phoneNumber(),  // Gunakan phoneNumber() di sini
             'address' => fake()->address(),
             'email' => fake()->unique()->safeEmail(),
             'email_verified_at' => now(),
